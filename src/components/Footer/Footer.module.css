@@ -6,8 +6,8 @@ footer {
 
 footer {
   padding: 0.5em;
-  width: 99%;
-  position: absolute;
+  width: 1009%;
+  position: fixed;
   left: 0;
   bottom: 0;
 }

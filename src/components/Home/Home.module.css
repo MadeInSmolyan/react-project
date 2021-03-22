@@ -1,0 +1,48 @@
+#home_view {
+  background-color: #1c1c1c;
+  color: #f1e4d3;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  background-color: #4caf50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+}
+
+#welcome_container {
+  width: 50%;
+  margin: auto;
+}
+
+#welcome_container img {
+  background-color: opacity;
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+#button_div {
+  padding-top: 10px;
+  width: 37%;
+  margin: auto;
+  display: flex;
+}
