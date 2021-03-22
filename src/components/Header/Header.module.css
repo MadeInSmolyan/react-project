@@ -1,0 +1,51 @@
+header {
+  background-color: #f1e4d3;
+  color: black;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  flex: 1 1 15px;
+}
+
+header nav {
+  margin: auto 1em;
+}
+
+.nav_buttons > a:hover {
+  cursor: pointer;
+  color: rgb(177, 171, 88);
+  font-weight: bolder;
+}
+
+.home_header:hover {
+  color: rgb(177, 171, 88);
+}
+
+a {
+  margin: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.home_header {
+  color: black;
+  float: left;
+  font-size: medium;
+}
+
+.nav_buttons a {
+  color: black;
+  font-size: small;
+  margin: 0.7em;
+  text-decoration: none;
+  font-weight: bold;
+
+  /* font-weight: bolder; */
+}

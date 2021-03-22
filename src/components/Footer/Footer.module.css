@@ -1,0 +1,17 @@
+footer {
+  background-color: #f1e4d3;
+  color: black;
+  width: 99%;
+}
+
+footer {
+  padding: 0.5em;
+  width: 99%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* 
+footer {
+  position: unset;
+} */
