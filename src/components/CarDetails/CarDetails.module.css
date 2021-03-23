@@ -15,13 +15,40 @@
   border-radius: 20px 20px 20px 20px;
 }
 
+.checkbox span,
+label {
+  color: #f1e4d3;
+}
+
+.textarea {
+  display: block;
+  float: inherit;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  resize: both;
+  min-height: 90px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
 .details_article {
   border-radius: 20px;
   width: 36em;
   height: 32em;
   margin: 1em;
-  background-color: #1c1c1c;
+  background-color: #494747;
   padding: 1em;
+}
+
+.details_article h3,
+.details_article p,
+.details_article span {
+  color: #f1e4d3;
 }
 
 .car_request {
@@ -34,6 +61,9 @@
   margin-top: 70px;
   width: 700px;
 }
+.equipment_form h2 {
+  color: #f1e4d3;
+}
 
 .checkbox {
   margin: 10px;
@@ -41,4 +71,23 @@
 
 input {
   margin: 10px;
+}
+
+.order_btn {
+  background-color: #656665;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 7px 70px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+}
+
+.order_btn:hover {
+  background-color: grey;
+  color: black;
 }

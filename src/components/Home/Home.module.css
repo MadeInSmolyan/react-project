@@ -1,5 +1,5 @@
 #home_view {
-  background-color: #1c1c1c;
+  background-color: #494747;
   color: #f1e4d3;
   height: 100%;
   font-family: "Lato", sans-serif;
@@ -16,12 +16,13 @@ h2 {
 }
 
 .button {
-  background-color: #4caf50;
+  background-color: #5aa85c;
   /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
+  border-radius: 10px 10px 10px 10px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -35,9 +36,9 @@ h2 {
 
 #welcome_container img {
   background-color: opacity;
-  margin-top: 50px;
-  height: 100%;
-  width: 100%;
+  margin-top: 20px;
+  height: 330px;
+  width: 550px;
 }
 
 #button_div {

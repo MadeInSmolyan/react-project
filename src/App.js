@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import Catalog from './components/Catalog/Catalog'
 import Home from './components/Home/Home'
 import CarDetails from './components/CarDetails/CarDetails';
+import Profile from './components/Profile/Profile';
 
 
 
@@ -20,7 +21,7 @@ function App() {
       <Catalog />
       <CarDetails />
 
-
+      <Profile />
       <Footer />
     </div>
   );

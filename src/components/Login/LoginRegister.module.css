@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background-color: #1c1c1c;
+  background-color: #494747;
   font-family: "Open Sans", sans-serif;
   margin: 0;
 }
@@ -29,11 +29,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 15px solid transparent;
-  border-bottom-color: #454545;
+  border-bottom-color: #2c2c2c;
 }
 
 .login_header {
-  background: #454545;
+  background: #2c2c2c;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;

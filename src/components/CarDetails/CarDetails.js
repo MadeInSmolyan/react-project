@@ -15,7 +15,7 @@ class CarDetails extends Component {
             </div>
             <div className={styles.car_request}>
                 <form className={styles.equipment_form}>
-                    <h2>Order:</h2>
+                    <h2>Place an order:</h2>
                     <label for="cars">Choose fuel type:</label><br />
                     <select className={styles.seclect} id="cars" name="cars">
                         <option value="petrol">Petrol</option>
@@ -27,20 +27,20 @@ class CarDetails extends Component {
 
                     <div className={styles.checkbox}>
 
-                        <label for="x"><input type="checkbox" id="x" /> <span>Label text x</span></label>
-                        <label for="y"><input type="checkbox" id="y" /> <span>Label text y</span></label>
-                        <label for="z"><input type="checkbox" id="z" /> <span>Label text z</span></label><br />
-                        <label for="x"><input type="checkbox" id="x" /> <span>Label text x</span></label>
-                        <label for="y"><input type="checkbox" id="y" /> <span>Label text y</span></label>
-                        <label for="z"><input type="checkbox" id="z" /> <span>Label text z</span></label><br />
-                        <label for="x"><input type="checkbox" id="x" /> <span>Label text x</span></label>
-                        <label for="y"><input type="checkbox" id="y" /> <span>Label text y</span></label>
-                        <label for="z"><input type="checkbox" id="z" /> <span>Label text z</span></label><br />
+                        <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
+                        <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
+                        <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
 
                     </div>
                     <label for="cars">Enter additional preferences:</label><br />
-                    <input type="text" name="description"></input><br />
-                    <input type="submit" value="Finish Order" />
+                    <p><span className={styles.textarea} role="textbox" contenteditable></span></p>
+                    <input className={styles.order_btn} type="submit" value="Finish Order" />
 
                 </form>
             </div>

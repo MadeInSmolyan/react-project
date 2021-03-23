@@ -22,6 +22,13 @@ section {
   margin: 1em;
   background-color: #f1e4d3;
   padding: 1em;
+  border-radius: 10px;
+}
+
+.catalog_article h3,
+p,
+span {
+  color: black;
 }
 
 a {

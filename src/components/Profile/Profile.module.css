@@ -1,0 +1,103 @@
+#user_avatar_url {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  height: 200px;
+  width: 200px;
+}
+
+#user_listings_title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  border-bottom: 3px solid grey;
+  margin: auto;
+  margin-bottom: 34px;
+  padding: 23px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  /* color: black; */
+}
+
+.user_profile h1,
+.user_profile h2,
+.user_profile p {
+  color: #f1e4d3;
+}
+
+.each_card {
+  /* margin-right: 20px; */
+}
+
+.home_page {
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.catalog_img {
+  margin: 15px;
+}
+
+.catalog_article {
+  /* flex: 1 1 30em; */
+  max-width: 20em;
+  margin: 1em;
+  background-color: #f1e4d3;
+  padding: 1em;
+}
+
+a {
+  margin: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+.home_page a {
+  background-color: #f1e4d3;
+  padding: 10px;
+  padding-top: 10px;
+  color: white;
+  width: 25em;
+  margin: auto;
+  min-height: 18em;
+}
+
+.home_page article {
+  background-color: #f1e4d3;
+  margin: auto;
+  color: black;
+  border: 1px solid white;
+  min-height: 21em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.home_page article h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.profile_btn {
+  background-color: #505250;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 7px 70px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+}
+
+.profile_btn:hover {
+  background-color: grey;
+  color: black;
+}
