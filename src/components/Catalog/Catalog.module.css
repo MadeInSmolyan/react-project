@@ -2,16 +2,21 @@ section {
   flex: 1 1 15em;
 }
 
+.available {
+  margin-top: 30px;
+  color: #f1e4d3;
+}
+
 .each_card {
   margin-right: 20px;
 }
 
 .home_page {
-  margin: 150px;
+  margin: auto;
   display: flex;
 }
 
-article {
+.catalog_article {
   /* flex: 1 1 30em; */
   max-width: 20em;
   margin: 1em;

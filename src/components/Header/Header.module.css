@@ -18,6 +18,12 @@ header nav {
   margin: 1em;
 }
 
+a img {
+  padding: 9px;
+  width: 50px;
+  height: 30px;
+}
+
 .nav_buttons > a:hover {
   cursor: pointer;
   color: rgb(177, 171, 88);
@@ -39,6 +45,7 @@ a {
   color: black;
   /* float: left; */
   font-size: medium;
+  padding-right: 1031px;
 }
 
 .nav_buttons a {

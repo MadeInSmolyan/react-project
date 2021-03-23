@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Catalog from './components/Catalog/Catalog'
 import Home from './components/Home/Home'
+import CarDetails from './components/CarDetails/CarDetails';
 
 
 
@@ -17,9 +18,9 @@ function App() {
       <Home />
       <LoginRegister />
       <Catalog />
+      <CarDetails />
 
 
-asdasdasdasdasd
       <Footer />
     </div>
   );

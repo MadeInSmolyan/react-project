@@ -6,8 +6,9 @@ class Header extends Component {
     render() {
         return <header>
             {/* <h1><a class={styles.home_header} href="#/home">SoftWiki</a></h1> */}
+            <a class={styles.home_header} href="#/home"><img src="/car-png.webp" alt="logo" /></a>
             <nav class={styles.nav_buttons}>
-                <a class={styles.home_header} href="#/home">SoftWiki</a>
+
                 <a href="#/categories">Categories</a>
                 <a href="#/create">Create</a>
                 <a href="#/logout">Logout</a>

@@ -6,14 +6,14 @@ class Home extends Component {
     render() {
         return <div id={styles.home_view}>
             <div id={styles.welcome_container}>
-                <h1>Welcome To Car Tube</h1>
+                <h1>Buy a car<br /> to reach the Star</h1>
                 <img src="/vecteezy_muscle-car_1193865.png" alt="carIntro" />
                 <h2>To see all the listings click the link below:</h2>
                 <div id={styles.button_div}>
                     <a href="#" className={styles.button}>Listings</a>
                 </div>
             </div>
-        </div>
+        </div >
     }
 }
 

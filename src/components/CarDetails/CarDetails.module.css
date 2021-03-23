@@ -1,0 +1,44 @@
+.car_detail {
+  border: 2px solid black;
+  border-radius: 30px;
+  margin-top: 10em;
+  width: 40em;
+  height: 36em;
+  display: flex;
+  margin-bottom: 10em;
+}
+
+.car_img {
+  width: 36em;
+  height: 28em;
+  /* border-radius: 30px 30px 30px; */
+  border-radius: 20px 20px 20px 20px;
+}
+
+.details_article {
+  border-radius: 20px;
+  width: 36em;
+  height: 32em;
+  margin: 1em;
+  background-color: #1c1c1c;
+  padding: 1em;
+}
+
+.car_request {
+  word-wrap: break-word;
+  padding-left: 3em;
+  max-width: 40em;
+}
+
+.equipment_form {
+  margin-top: 70px;
+  width: 700px;
+}
+
+.checkbox {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
