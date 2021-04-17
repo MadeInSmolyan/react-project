@@ -1,4 +1,4 @@
-import { Component } from 'react';
+
 import styles from './CarDetails.module.css'
 
 const CarDetails = () => {
@@ -11,10 +11,10 @@ const CarDetails = () => {
         {label: 'Diesel', value: 'diesel'}
     ]
 
-        return <div class={styles.car_detail}>
+        return <div className={styles.car_detail}>
             <div>
-                <article class={styles.details_article}>
-                    <img class={styles.car_img} src="https://s1.cdn.autoevolution.com/images/models/AUDI_A3-Sportback-2020_main.jpg"
+                <article className={styles.details_article}>
+                    <img className={styles.car_img} src="https://s1.cdn.autoevolution.com/images/models/AUDI_A3-Sportback-2020_main.jpg"
                         alt="" />
                     <h3>Topic: <span>Stacks and Queues</span></h3>
                     <p>Category: <span>JAVA</span></p>
