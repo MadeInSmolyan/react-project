@@ -9,43 +9,33 @@ import Catalog from './components/Catalog/Catalog'
 import Home from './components/Home/Home'
 import CarDetails from './components/CarDetails/CarDetails';
 import Profile from './components/Profile/Profile';
-import { useEffect, useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react';
 
 
 
 
 
 function App() {
-  // const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((authUser) => {
-  //     if (authUser){
-  //       //setUser(authUser);
-  //       console.log('Logged In');
-  //       console.log(authUser);
-  //     } else {
-  //       //setUser(null);
-  //       console.log('Logged Out');
-  //     }  
-  //   });
-  // }, [])
+  useEffect(() => {
+    auth.onAuthStateChanged(setUser);
+  }, [])
 
   return (
       <BrowserRouter>
     <div className="App">
       
-      {/* <Header email={user?.email} isAuthenticated={Boolean(user)} /> */}
-      <Header />
+      <Header email={user?.email} isAuthenticated={Boolean(user)} />
+      {/* <Header /> */}
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <Route path='/catalog' component={Catalog} />
         <Route path='/details' component={CarDetails} />
-        {/* <Route email={user?.email} path='/profile' component={Profile} /> */}
-        <Route path='/profile' component={Profile} />
-        <Route path='/logout' render={props => {
+        <Route path='/profile' component={Profile } />
+        <Route path='/logout' render={() => {
           auth.signOut();
           return <Redirect to="/" />
         }} />

@@ -29,7 +29,7 @@ const Register = ({
         <form onSubmit={onRegisterSubmitHandler} className={styles.login_container}>
             <p><input type="email" name="email" placeholder="Email" /></p>
             <p><input type="password" name="password" placeholder="Password" /></p>
-            <p><input type="rePassword" placeholder="Repeat Password" /></p>
+            <p><input type="password" placeholder="Repeat Password" /></p>
                 <p><input type="submit" value="Register" /></p>
             </form>
         </div>

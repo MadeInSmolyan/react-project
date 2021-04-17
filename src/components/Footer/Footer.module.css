@@ -1,7 +1,6 @@
 footer {
-  background-color: #f1e4d3;
-  color: black;
-  
+  background-color: #f1e4d3 !important;
+  color: black !important;
 }
 
 footer p{
@@ -12,9 +11,9 @@ footer p{
 footer {
   padding: 0.5em;
   width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
 }
 /* 
 footer {
