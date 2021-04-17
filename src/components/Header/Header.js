@@ -9,9 +9,9 @@ const Header = () => {
             <Link class={styles.home_header} to="/"><img src="/car-png.webp" alt="logo" /></Link>
             <nav class={styles.nav_buttons}>
 
+                <Link to="/logout">Logout</Link>
                 <Link to="/catalog">Catalog</Link>
                 <Link to="/profile">Profile</Link>
-                <Link to="/logout">Logout</Link>
                 <Link to="/auth">Sign Up / Sign In</Link>
                            
             </nav>

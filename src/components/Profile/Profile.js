@@ -4,8 +4,8 @@ import styles from './Profile.module.css'
 const Profile = () => {
         return <div class={styles.user_profile}>
 
-            <img id={styles.user_avatar_url} src="../public/female.png" alt="user-profile" />
-            <h1>user</h1>
+            <img id={styles.user_avatar_url} src="../public/male.png" alt="user-profile" />
+            {/* <h1>User:</h1> */}
             <h2>user@abv.bg</h2>
 
             <p id={styles.user_listings_title}>Your Orders:</p>

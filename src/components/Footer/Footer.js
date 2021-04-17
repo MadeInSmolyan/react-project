@@ -4,7 +4,9 @@ import styles from './Footer.module.css'
 class Footer extends Component {
 
     render() {
-        return  <footer>My Site © Show info....</footer>
+        return  <footer>
+            <p>My Site © Show info....</p>
+        </footer>
     }
 }
 

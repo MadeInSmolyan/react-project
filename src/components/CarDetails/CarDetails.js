@@ -2,6 +2,15 @@ import { Component } from 'react';
 import styles from './CarDetails.module.css'
 
 const CarDetails = () => {
+
+    const options = [
+        {label: 'Petrol', value: 'petrol'},
+        {label: 'Gasoline', value: 'gasoline'},
+        {label: 'Electrical', value: 'electrical'},
+        {label: 'Hybrid', value: 'hybrid'},
+        {label: 'Diesel', value: 'diesel'}
+    ]
+
         return <div class={styles.car_detail}>
             <div>
                 <article class={styles.details_article}>
@@ -13,13 +22,12 @@ const CarDetails = () => {
             </div>
             <div className={styles.car_request}>
                 <form className={styles.equipment_form}>
-                    <h2>Place an order:</h2>
+                    <h1>Place an order:</h1>
                     <label for="cars">Choose fuel type:</label><br />
                     <select className={styles.seclect} id="cars" name="cars">
-                        <option value="petrol">Petrol</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="diesel">Hybrid</option>
-                        <option value="electrical">Electrical</option>
+                        
+                        {options.map(x => 
+                            <option key={x.value} value={x.value}>{x.label}</option>)}
                     </select><br /><br />
                     <label for="cars">Choose extra equipment:</label><br />
 
@@ -29,11 +37,15 @@ const CarDetails = () => {
                         <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
                         <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
                         <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
-                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
-                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label><br />
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label>
                         <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
-                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label><br />
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label>
                         <label for="z"><input type="checkbox" /> <span>Label text z</span></label><br />
+                        <label for="y"><input type="checkbox" /> <span>Label text y</span></label>
+                        <label for="z"><input type="checkbox" /> <span>Label text z</span></label>
+                        <label for="x"><input type="checkbox" /> <span>Label text x</span></label>
 
                     </div>
                     <label for="cars">Enter additional preferences:</label><br />

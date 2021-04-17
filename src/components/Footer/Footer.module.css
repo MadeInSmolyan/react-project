@@ -1,11 +1,17 @@
 footer {
   background-color: #f1e4d3;
   color: black;
+  
+}
+
+footer p{
+  color: black;
+  text-align: center;
 }
 
 footer {
   padding: 0.5em;
-  width: 1009%;
+  width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
