@@ -1,9 +1,7 @@
 import { Component } from 'react';
 import styles from './LoginRegister.module.css'
 
-class LoginRegister extends Component {
-
-    render() {
+const LoginRegister = () => {
         return <div className={styles.login}>
             <div className={styles.upper_triangle}></div>
             <h2 className={styles.login_header}>Log in / Sign up</h2>
@@ -14,7 +12,7 @@ class LoginRegister extends Component {
                 <p><input type="submit" value="Sign up" /></p>
             </form>
         </div>
-    }
+    
 }
 
 

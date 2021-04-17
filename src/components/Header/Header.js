@@ -1,22 +1,22 @@
 import { Component } from 'react';
 import styles from './Header.module.css'
+import {Link} from 'react-router-dom';
 
-class Header extends Component {
 
-    render() {
+const Header = () => {
         return <header>
             {/* <h1><a class={styles.home_header} href="#/home">SoftWiki</a></h1> */}
-            <a class={styles.home_header} href="#/home"><img src="/car-png.webp" alt="logo" /></a>
+            <Link class={styles.home_header} to="/"><img src="/car-png.webp" alt="logo" /></Link>
             <nav class={styles.nav_buttons}>
 
-                <a href="#/categories">Categories</a>
-                <a href="#/create">Create</a>
-                <a href="#/logout">Logout</a>
-                <a href="#/login">Login</a>
-                <a href="#/register">Register</a>
+                <Link to="/catalog">Catalog</Link>
+                <Link to="/profile">Profile</Link>
+                <Link to="/logout">Logout</Link>
+                <Link to="/auth">Sign Up / Sign In</Link>
+                           
             </nav>
         </header>
     }
-}
+
 
 export default Header

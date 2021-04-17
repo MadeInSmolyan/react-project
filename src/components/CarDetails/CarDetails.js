@@ -1,9 +1,7 @@
 import { Component } from 'react';
 import styles from './CarDetails.module.css'
 
-class CarDetails extends Component {
-
-    render() {
+const CarDetails = () => {
         return <div class={styles.car_detail}>
             <div>
                 <article class={styles.details_article}>
@@ -45,7 +43,7 @@ class CarDetails extends Component {
                 </form>
             </div>
         </div>
-    }
+    
 }
 
 export default CarDetails

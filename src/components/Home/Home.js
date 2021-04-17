@@ -1,20 +1,19 @@
 import { Component } from 'react';
 import styles from './Home.module.css'
+import {Link} from 'react-router-dom'
 
-class Home extends Component {
-
-    render() {
+const Home = () => {
         return <div id={styles.home_view}>
             <div id={styles.welcome_container}>
                 <h1>Welcome to Uni Motors</h1>
                 <img src="/vecteezy_muscle-car_1193865.png" alt="carIntro" />
                 <h2>To see all the listings click the link below:</h2>
                 <div id={styles.button_div}>
-                    <a href="#" className={styles.button}>Listings</a>
+                    <Link to="/catalog" className={styles.button}>Listings</Link>
                 </div>
             </div>
         </div >
-    }
+    
 }
 
 export default Home

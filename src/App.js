@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import LoginRegister from './components/Login/LoginRegister'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -14,16 +15,28 @@ import Profile from './components/Profile/Profile';
 
 function App() {
   return (
+      <BrowserRouter>
     <div className="App">
+      
       <Header />
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/auth' component={LoginRegister} />
+        <Route path='/catalog' component={Catalog} />
+        <Route path='/details' component={CarDetails} />
+        <Route path='/profile' component={Profile} />
+      </Switch>
+      
+      {/* <Home />
       <LoginRegister />
       <Catalog />
       <CarDetails />
-
-      <Profile />
+      
+    <Profile /> */}
+      
       <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 

@@ -12,12 +12,15 @@ section {
 }
 
 .home_page {
-  margin: auto;
+  margin-left: 110px;
+  width: 1700px;
+  float: left;
   display: flex;
 }
 
 .catalog_article {
-  /* flex: 1 1 30em; */
+  flex: 3;
+  /* margin-left: 1em; */
   max-width: 20em;
   margin: 1em;
   background-color: #f1e4d3;
@@ -61,6 +64,8 @@ a {
 .home_page article:hover {
   background-color: grey;
   color: black;
+  width: 300px;
+  height: 350px;
 }
 
 .home_page article h3,

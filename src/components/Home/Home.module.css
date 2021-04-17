@@ -37,8 +37,9 @@ h2 {
 #welcome_container img {
   background-color: opacity;
   margin-top: 20px;
-  height: 330px;
-  width: 550px;
+  margin-bottom: 30px;
+  height: 420px;
+  width: 650px;
 }
 
 #button_div {

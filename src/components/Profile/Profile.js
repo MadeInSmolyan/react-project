@@ -1,9 +1,7 @@
 import { Component } from 'react';
 import styles from './Profile.module.css'
 
-class Profile extends Component {
-
-    render() {
+const Profile = () => {
         return <div class={styles.user_profile}>
 
             <img id={styles.user_avatar_url} src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png"
@@ -26,7 +24,7 @@ class Profile extends Component {
                 </div>
             </div>
         </div>
-    }
+    
 }
 
 export default Profile
