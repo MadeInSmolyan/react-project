@@ -17,6 +17,8 @@ const Header = ({
                     }
                 
             <nav className={styles.nav_buttons}>
+            
+
             {isAuthenticated
                     ? <Link to="/logout">Logout</Link>
                     : <Link to="/register">Register</Link>
@@ -26,11 +28,7 @@ const Header = ({
                     ? <Link to="/profile">Profile</Link>
                     : <Link to="/login">Login</Link>
                     }
-                {/* <Link to="/logout">Logout</Link>
-                <Link to="/catalog">Catalog</Link>
-                <Link to="/profile">Profile</Link>
-                <Link to="/register">Register</Link>
-                <Link to="/login">Login</Link> */}
+                    <Link to="/catalog">Catalog</Link>
                            
             </nav>
         </header>
