@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import './utils/firebase';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import LoginRegister from './components/Login/LoginRegister'
+import Login from './components/Login/Login'
+import Register from './components/Register/Register'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Catalog from './components/Catalog/Catalog'
@@ -21,7 +23,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/auth' component={LoginRegister} />
+        <Route path='/auth' component={Login} />
+        <Route path='/auth' component={Register} />
         <Route path='/catalog' component={Catalog} />
         <Route path='/details' component={CarDetails} />
         <Route path='/profile' component={Profile} />

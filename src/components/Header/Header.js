@@ -12,7 +12,8 @@ const Header = () => {
                 <Link to="/logout">Logout</Link>
                 <Link to="/catalog">Catalog</Link>
                 <Link to="/profile">Profile</Link>
-                <Link to="/auth">Sign Up / Sign In</Link>
+                <Link to="/register">Register</Link>
+                <Link to="/login">Login</Link>
                            
             </nav>
         </header>
