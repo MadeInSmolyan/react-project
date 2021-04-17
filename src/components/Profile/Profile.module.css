@@ -1,9 +1,10 @@
 #user_avatar_url {
   display: block;
   margin: auto;
+  /* background-color: transparent; */
   margin-top: 25px;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 #user_listings_title {
@@ -22,6 +23,11 @@
   /* color: black; */
 }
 
+i{
+  margin-top: 50px;
+  margin: auto;
+}
+
 .user_profile h1,
 .user_profile h2,
 .user_profile p {
@@ -29,17 +35,19 @@
 }
 
 .each_card {
-  /* margin-right: 20px; */
+  margin-right: 10px;
 }
 
 .home_page {
-  margin-left: 270px;
+  margin-left: 237px;
   margin-bottom: 100px;
   display: flex;
 }
 
 .catalog_img {
   margin: 15px;
+  background-color: transparent;
+  
 }
 
 .catalog_article {
