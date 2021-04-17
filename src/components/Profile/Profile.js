@@ -4,8 +4,7 @@ import styles from './Profile.module.css'
 const Profile = () => {
         return <div class={styles.user_profile}>
 
-            <img id={styles.user_avatar_url} src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png"
-                alt="user-profile" />
+            <img id={styles.user_avatar_url} src="../public/female.png" alt="user-profile" />
             <h1>user</h1>
             <h2>user@abv.bg</h2>
 

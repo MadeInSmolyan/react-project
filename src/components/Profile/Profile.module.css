@@ -33,6 +33,7 @@
 }
 
 .home_page {
+  margin-left: 270px;
   margin-bottom: 100px;
   display: flex;
 }
