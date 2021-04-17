@@ -1,4 +1,4 @@
-import { Component } from 'react'
+
 import styles from './Catalog.module.css'
 import EachCard from "./EachCard/EachCard";
 

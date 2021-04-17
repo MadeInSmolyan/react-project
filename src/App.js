@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import './utils/firebase';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {auth} from './utils/firebase';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import Header from './components/Header/Header'
@@ -10,16 +9,33 @@ import Catalog from './components/Catalog/Catalog'
 import Home from './components/Home/Home'
 import CarDetails from './components/CarDetails/CarDetails';
 import Profile from './components/Profile/Profile';
+import { useEffect, useState } from 'react/cjs/react.production.min';
 
 
 
 
 
 function App() {
+  // const [user, setUser] = useState(null);
+
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((authUser) => {
+  //     if (authUser){
+  //       //setUser(authUser);
+  //       console.log('Logged In');
+  //       console.log(authUser);
+  //     } else {
+  //       //setUser(null);
+  //       console.log('Logged Out');
+  //     }  
+  //   });
+  // }, [])
+
   return (
       <BrowserRouter>
     <div className="App">
       
+      {/* <Header email={user?.email} isAuthenticated={Boolean(user)} /> */}
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
@@ -27,7 +43,12 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path='/catalog' component={Catalog} />
         <Route path='/details' component={CarDetails} />
+        {/* <Route email={user?.email} path='/profile' component={Profile} /> */}
         <Route path='/profile' component={Profile} />
+        <Route path='/logout' render={props => {
+          auth.signOut();
+          return <Redirect to="/" />
+        }} />
       </Switch>
       
       {/* <Home />

@@ -1,7 +1,9 @@
 import styles from './Login.module.css';
 import {auth} from '../../utils/firebase';
 
-const Login = () => {
+const Login = ({
+    history
+}) => {
 
     const onLoginFormSubmitHandler = (e) => {
         e.preventDefault();
@@ -16,6 +18,7 @@ const Login = () => {
         auth.signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 console.log(userCredential);
+                history.push('/');
             })
 
     }

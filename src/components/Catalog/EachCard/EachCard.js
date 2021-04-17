@@ -1,4 +1,4 @@
-import { Component } from 'react'
+
 import styles from './EachCard.module.css'
 
 const EachCard = () => {
