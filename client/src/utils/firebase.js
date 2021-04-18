@@ -18,7 +18,7 @@ const firebaseConfig = {
         if (authUser){
           
           console.log('Logged In');
-          console.log(authUser);
+          // console.log(authUser);
         } else {
           
           console.log('Logged Out');

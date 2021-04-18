@@ -1,66 +1,154 @@
-import {useEffect, useState} from 'react';
+
+import firebase from '../../utils/firebase';
 import * as carsService from '../../services/carsService'
 import styles from './CarDetails.module.css'
+import { UserContext } from '../../context/user';
+import React,{useContext,useState,useEffect} from 'react'
+import { useHistory } from 'react-router-dom';
 
-const CarDetails = ({
-    match
-}) => {
 
 
+
+const CarDetails = ({match}) => {
+
+    const [uid, setUid] = React.useState(null);
+
+useEffect(() => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      const { uid } = user;
+      setUid(uid);
+    }
+  });
+}, []);
+console.log(uid);
 
     let [car, setCar] = useState({});
 
     useEffect(() => {
-        carsService.getOne.match.params.id
+        carsService.getOne(match.params.id)
         .then(res => setCar(res))
     }, [match]);
 
-    const options = [
+    const fuelOptions = [
         {label: 'Petrol', value: 'petrol'},
         {label: 'Gasoline', value: 'gasoline'},
         {label: 'Hybrid', value: 'hybrid'},
         {label: 'Diesel', value: 'diesel'}
-    ]
+    ];
+
+    const colorOptions = [
+        {label: 'Black', value: 'black'},
+        {label: 'Nardo Grey', value: 'nardo grey'},
+        {label: 'Nogaro Blue', value: 'nogaro blue'},
+        {label: 'Yellow', value: 'yellow'}
+    ];
+
+    const rimsOptions = [
+        {label: '18 Inch Rims', value: '18 inch rims'},
+        {label: '19 Inch Rims', value: '19 inch rims'},
+        {label: '20 Inch Rims', value: '20 inch rims'},
+        {label: '21 Inch Rims', value: '21 inch rims'}
+    ];
+
+    const driveOptions = [
+        {label: 'All Wheel Drive', value: 'all wheel drive'},
+        {label: 'Rear Wheel Drive', value: 'rear wheel drive'},
+        {label: 'Front Wheel Drive', value: 'front wheel drive'}
+    ];
+
+    const seatsOptions = [
+        {label: 'Leather Interior', value: 'leather interior'},
+        {label: 'Alcantara Interior', value: 'alcantara interior'},
+        {label: 'Suede Interior', value: 'suede interior'}
+    ];
+
+    // let [userId, setuserId] = useState();
+
+    // useEffect(() => {
+    //     const user = firebase.auth().currentUser.uid
+    //     .then(res => setuserId(res))
+    // }, []);
+
+    // const user = auth.currentUser.uid
+    // console.log(user);
+
+    const onOrderSubmitHandler = (e) => {
+        e.preventDefault();
+
+        const fuel = e.target.fuel.value;
+        const color = e.target.color.value;
+        const rims = e.target.rims.value;
+        const drive = e.target.drive.value;
+        const textarea = e.target.textarea.value;
+
+
+        const requestOptions = {
+            method: 'POST',
+            body: JSON.stringify({ fuel: e.target.fuel.value })
+        };
+        fetch('http://localhost:5000/orders', requestOptions)
+            .then(response => response.json())
+            
+    
+        // console.log(fuel);
+        // console.log(color);
+        // console.log(textarea);
+        // console.log(rims);
+        // console.log(drive);
+    }
 
         return <div className={styles.car_detail}>
             <div>
                 <article className={styles.details_article}>
-                    <img className={styles.car_img} src="{car.imageUrl}" alt="" />
-                    <h3>Make: <span></span></h3>
-                    <p>Model: <span></span></p>
-                    <p>Production Year: <span></span></p>
+                    <img className={styles.car_img} src={car.imageUrl} alt="" />
+                    <h3>Make: <span>{car.make}</span></h3>
+                    <h3>Model: <span>{car.model}</span></h3>
+                    <p>Production Year: <span>{car.year}</span></p>
                 </article>
             </div>
             <div className={styles.car_request}>
-                <form className={styles.equipment_form}>
+                <form onSubmit={onOrderSubmitHandler} className={styles.equipment_form}>
                     <h1>Place an order:</h1>
-                    <label htmlFor="cars">Choose fuel type:</label><br />
-                    <select className={styles.seclect} id="cars" name="cars">
+                        <label htmlFor="cars">Choose fuel type:</label>
+                        <label htmlFor="cars">Choose desired color:</label><br/>
+                    <select className={styles.seclect} id="fuel" name="fuel">
                         
-                        {options.map(x => 
+                        {fuelOptions.map(x => 
                             <option key={x.value} value={x.value}>{x.label}</option>)}
-                    </select><br /><br />
-                    <label htmlFor="cars">Choose extra equipment:</label><br />
+                    </select>
+                    
+                    <select className={styles.seclect} id="color" name="color">
+                        
+                        {colorOptions.map(x => 
+                            <option key={x.value} value={x.value}>{x.label}</option>)}
+                    </select><br/>
 
-                    <div className={styles.checkbox}>
+                    <label htmlFor="cars">Choose rims size:</label><br/>
+                    <select className={styles.seclect} id="rims" name="rims">
+                        
+                        {rimsOptions.map(x => 
+                            <option key={x.value} value={x.value}>{x.label}</option>)}
+                    </select><br />
 
-                        <label htmlFor="x"><input type="checkbox" /> <span>Heated Seats</span></label>
-                        <label htmlFor="y"><input type="checkbox" /> <span>Panorama Roof</span></label>
-                        <label htmlFor="z"><input type="checkbox" /> <span>Xenon Headlights</span></label><br />
-                        <label htmlFor="x"><input type="checkbox" /> <span>Bags Suspension</span></label>
-                        <label htmlFor="y"><input type="checkbox" /> <span>Auto Start Stop</span></label><br />
-                        <label htmlFor="z"><input type="checkbox" /> <span>ISOFIX</span></label>
-                        <label htmlFor="x"><input type="checkbox" /> <span>Multi Steering Wheel</span></label>
-                        <label htmlFor="y"><input type="checkbox" /> <span>Navigation</span></label><br />
-                        <label htmlFor="z"><input type="checkbox" /> <span>Sport Rims</span></label>
-                        <label htmlFor="z"><input type="checkbox" /> <span>Spoiler</span></label><br />
-                        <label htmlFor="y"><input type="checkbox" /> <span>Sliding Roof</span></label>
-                        <label htmlFor="z"><input type="checkbox" /> <span>All Wheel Drive</span></label>
-                        <label htmlFor="x"><input type="checkbox" /> <span>Stage 1 Tuning</span></label>
+                    <label htmlFor="cars">Choose drivetrain:</label>
+                    <label htmlFor="cars">Choose Your Interior:</label><br/>
+                    <select className={styles.seclect} id="drive" name="drive">
+                        
+                        {driveOptions.map(x => 
+                            <option key={x.value} value={x.value}>{x.label}</option>)}
+                    </select>       
 
-                    </div>
+                    
+                    <select className={styles.seclect} id="drive" name="drive">
+                        
+                        {seatsOptions.map(x => 
+                            <option key={x.value} value={x.value}>{x.label}</option>)}
+                    </select><br /><br />   
+        
                     <label htmlFor="cars">Enter additional preferences:</label><br />
-                    <p><span className={styles.textarea} role="textbox" contenteeditable></span></p>
+                    <textarea className={styles.textarea} name="textarea" cols="60" rows="4"></textarea>
+                    {/* <p><span className={styles.textarea} role="textbox"></span></p> */}
                     <input className={styles.order_btn} type="submit" value="Finish Order" />
 
                 </form>

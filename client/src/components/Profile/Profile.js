@@ -2,6 +2,7 @@
 import styles from './Profile.module.css'
 
 const Profile = () => {
+    
         return <div className={styles.user_profile}>
             
             <img id={styles.user_avatar_url} src="https://www.freeiconspng.com/uploads/profile-icon-9.png" alt="user-profile" />

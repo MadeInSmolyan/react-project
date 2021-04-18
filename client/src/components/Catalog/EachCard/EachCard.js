@@ -8,6 +8,8 @@ const EachCard = ({
     year,
     imageUrl
 }) => {
+
+    console.log(id);
         return <div className={styles.each_card}>
         <article className={styles.catalog_article}>
             <img className={styles.catalog_img} src={imageUrl} alt="as" />

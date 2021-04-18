@@ -1,5 +1,6 @@
 import './App.css';
-import {auth} from './utils/firebase';
+import React,{useContext} from 'react'
+import firebase from './utils/firebase';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
@@ -16,38 +17,52 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
+
+  const [uid, setUid] = React.useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        const { uid } = user;
+        setUid(uid);
+      }
+    });
+  }, []);
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    auth.onAuthStateChanged(setUser);
+    firebase.auth().onAuthStateChanged(setUser);
   }, [])
+
+  const [cars, setCars] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/cars')
+            .then(res => res.json())
+            .then(res => setCars(res))
+            .catch((err) => console.log(err))
+    }, [])
+
+    // console.log(cars);
 
   return (
       <BrowserRouter>
     <div className="App">
       
       <Header email={user?.email} isAuthenticated={Boolean(user)} />
-      {/* <Header /> */}
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <Route path='/catalog' component={Catalog} />
         <Route path='/cars/details/:id' component={CarDetails} />
-        <Route path='/profile' component={Profile } />
+        <Route path='/profile' component={Profile} />
         <Route path='/logout' render={() => {
-          auth.signOut();
+          firebase.auth().signOut();
           return <Redirect to="/" />
         }} />
       </Switch>
-      
-      {/* <Home />
-      <LoginRegister />
-      <Catalog />
-      <CarDetails />
-      
-    <Profile /> */}
-      
       <Footer />
     </div>
     </BrowserRouter>
