@@ -39,7 +39,7 @@ i{
 }
 
 .home_page {
-  margin-left: 237px;
+  margin-left: 200px;
   margin-bottom: 100px;
   display: flex;
 }
@@ -69,9 +69,9 @@ a {
   padding: 10px;
   padding-top: 10px;
   color: white;
-  width: 25em;
+  width: 17em;
   margin: auto;
-  min-height: 18em;
+  min-height: 1em;
 }
 
 .home_page article {

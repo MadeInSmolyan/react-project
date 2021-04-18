@@ -4,7 +4,7 @@ import * as carsService from '../../services/carsService'
 import styles from './CarDetails.module.css'
 import React,{useState,useEffect} from 'react'
 
-const CarDetails = ({match}) => {
+const CarDetails = ({match, history}) => {
 
     const [uid, setUid] = React.useState(null);
 
@@ -71,24 +71,9 @@ useEffect(() => {
 
 
         carsService.create(imageUrl, make, model, fuel.value, color.value, rims.value, drive.value, textarea.value, interior.value, uid)
-
-        // const fuel = e.target.fuel.value;
-        // const color = e.target.color.value;
-        // const rims = e.target.rims.value;
-        // const drive = e.target.drive.value;
-
-        // const requestOptions = {
-        //     method: 'POST',
-        //     body: JSON.stringify({ fuel: e.target.fuel.value })
-        // };
-        // fetch('http://localhost:5000/orders', requestOptions)
-        //     .then(response => response.json())
-            
-        // console.log(fuel);
-        // console.log(color);
-        // console.log(textarea);
-        // console.log(rims);
-        // console.log(drive);
+            .then(() => {
+                history.push(`/profile/${uid}`)
+            })
     }
 
         return <div className={styles.car_detail}>
