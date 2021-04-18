@@ -21,7 +21,7 @@ const Header = ({
           });
         }, []);
 
-        console.log(uid);
+        // console.log(uid);
 
         return <header>
             {/* <h1><a class={styles.home_header} href="#/home">SoftWiki</a></h1> */}
