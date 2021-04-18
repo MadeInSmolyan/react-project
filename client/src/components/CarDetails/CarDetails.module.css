@@ -80,12 +80,30 @@ select{
   max-width: 40em;
 }
 
+.car_details{
+  width: 700px;
+}
+
+form p {
+  display: none;
+}
+
+.order_form{
+  /* float: right; */
+  width: 700px;
+  margin-top: 50px;
+  
+}
+
 .equipment_form {
   margin-top: 30px;
-  height: 550px;
-  width: 700px;
+  height: 650px;
+  width: 1400px;
+  min-width: 1400px;
   border: 2px solid black;
   border-radius: 30px;
+  display: flex;
+
 }
 .equipment_form h2 {
   color: #f1e4d3;
@@ -111,6 +129,7 @@ input {
   display: inline-block;
   font-size: 16px;
   margin: auto;
+  margin-top: 30px;
 }
 
 .order_btn:hover {

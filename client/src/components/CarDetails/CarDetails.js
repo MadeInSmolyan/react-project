@@ -2,12 +2,7 @@
 import firebase from '../../utils/firebase';
 import * as carsService from '../../services/carsService'
 import styles from './CarDetails.module.css'
-import { UserContext } from '../../context/user';
-import React,{useContext,useState,useEffect} from 'react'
-import { useHistory } from 'react-router-dom';
-
-
-
+import React,{useState,useEffect} from 'react'
 
 const CarDetails = ({match}) => {
 
@@ -21,7 +16,7 @@ useEffect(() => {
     }
   });
 }, []);
-console.log(uid);
+// console.log(uid);
 
     let [car, setCar] = useState({});
 
@@ -63,34 +58,32 @@ console.log(uid);
         {label: 'Suede Interior', value: 'suede interior'}
     ];
 
-    // let [userId, setuserId] = useState();
-
-    // useEffect(() => {
-    //     const user = firebase.auth().currentUser.uid
-    //     .then(res => setuserId(res))
-    // }, []);
-
-    // const user = auth.currentUser.uid
-    // console.log(user);
 
     const onOrderSubmitHandler = (e) => {
         e.preventDefault();
 
-        const fuel = e.target.fuel.value;
-        const color = e.target.color.value;
-        const rims = e.target.rims.value;
-        const drive = e.target.drive.value;
-        const textarea = e.target.textarea.value;
+        const {fuel, color, rims, drive, textarea, interior} = e.target;
+        let imageUrl = car.imageUrl;
+        let make = car.make;
+        let model = car.model;
+
+        console.log(uid);
 
 
-        const requestOptions = {
-            method: 'POST',
-            body: JSON.stringify({ fuel: e.target.fuel.value })
-        };
-        fetch('http://localhost:5000/orders', requestOptions)
-            .then(response => response.json())
+        carsService.create(imageUrl, make, model, fuel.value, color.value, rims.value, drive.value, textarea.value, interior.value, uid)
+
+        // const fuel = e.target.fuel.value;
+        // const color = e.target.color.value;
+        // const rims = e.target.rims.value;
+        // const drive = e.target.drive.value;
+
+        // const requestOptions = {
+        //     method: 'POST',
+        //     body: JSON.stringify({ fuel: e.target.fuel.value })
+        // };
+        // fetch('http://localhost:5000/orders', requestOptions)
+        //     .then(response => response.json())
             
-    
         // console.log(fuel);
         // console.log(color);
         // console.log(textarea);
@@ -99,7 +92,11 @@ console.log(uid);
     }
 
         return <div className={styles.car_detail}>
-            <div>
+            
+            <div className={styles.car_request}>
+                <form onSubmit={onOrderSubmitHandler} className={styles.equipment_form}>
+                    <p>{uid}</p>
+                <div className={styles.car_details}>
                 <article className={styles.details_article}>
                     <img className={styles.car_img} src={car.imageUrl} alt="" />
                     <h3>Make: <span>{car.make}</span></h3>
@@ -107,8 +104,7 @@ console.log(uid);
                     <p>Production Year: <span>{car.year}</span></p>
                 </article>
             </div>
-            <div className={styles.car_request}>
-                <form onSubmit={onOrderSubmitHandler} className={styles.equipment_form}>
+            <div className={styles.order_form}>
                     <h1>Place an order:</h1>
                         <label htmlFor="cars">Choose fuel type:</label>
                         <label htmlFor="cars">Choose desired color:</label><br/>
@@ -140,7 +136,7 @@ console.log(uid);
                     </select>       
 
                     
-                    <select className={styles.seclect} id="drive" name="drive">
+                    <select className={styles.seclect} id="interior" name="interior">
                         
                         {seatsOptions.map(x => 
                             <option key={x.value} value={x.value}>{x.label}</option>)}
@@ -150,7 +146,7 @@ console.log(uid);
                     <textarea className={styles.textarea} name="textarea" cols="60" rows="4"></textarea>
                     {/* <p><span className={styles.textarea} role="textbox"></span></p> */}
                     <input className={styles.order_btn} type="submit" value="Finish Order" />
-
+                            </div>
                 </form>
             </div>
         </div>

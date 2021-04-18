@@ -18,7 +18,7 @@ const Catalog = ({
     const firstCars = cars.slice(0, 4)
     const secondCars = cars.slice(4, 8);
 
-    // console.log(cars);
+    // console.log(secondCars);
     
 
         return <div>
@@ -31,7 +31,7 @@ const Catalog = ({
             </div>
             <div className={styles.home_page}>
                 
-                {secondCars.map(x => <EachCard key={x.id} make={x.make} model={x.model} year={x.year} imageUrl={x.imageUrl} />)}
+                {secondCars.map(x => <EachCard key={x.id} id={x.id} make={x.make} model={x.model} year={x.year} imageUrl={x.imageUrl} />)}
                 
                 
             </div>

@@ -18,16 +18,16 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [uid, setUid] = React.useState(null);
+  // const [uid, setUid] = React.useState(null);
 
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        const { uid } = user;
-        setUid(uid);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       const { uid } = user;
+  //       setUid(uid);
+  //     }
+  //   });
+  // }, []);
 
   const [user, setUser] = useState(null);
 
@@ -57,7 +57,7 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path='/catalog' component={Catalog} />
         <Route path='/cars/details/:id' component={CarDetails} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/profile/:id' component={Profile} />
         <Route path='/logout' render={() => {
           firebase.auth().signOut();
           return <Redirect to="/" />

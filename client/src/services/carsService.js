@@ -5,3 +5,25 @@ export const getOne = (id) => {
         .then(res => res.json())
         .catch(err => console.log(err))
 }
+
+export const create = (imageUrl, make, model, fuel, color, rims, drive, textarea, interior, uid) => {
+    let order = {
+        imageUrl,
+        make,
+        model,
+        fuel,
+        color,
+        rims,
+        drive,
+        textarea,
+        interior,
+        uid
+    }
+    return fetch(`${url}`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(order)
+    });
+}
