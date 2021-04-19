@@ -1,8 +1,9 @@
 import styles from "./Catalog.module.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import EachCard from "./EachCard/EachCard";
+import firebase from "../../utils/firebase";
 
-const Catalog = ({ match }) => {
+const Catalog = ({ match, isAuthenticated}) => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -10,6 +11,17 @@ const Catalog = ({ match }) => {
       .then((res) => res.json())
       .then((res) => setCars(res))
       .catch((err) => console.log(err));
+  }, []);
+
+  const [uid, setUid] = React.useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        const { uid } = user;
+        setUid(uid);
+      }
+    });
   }, []);
 
   const firstCars = cars.slice(0, 4);

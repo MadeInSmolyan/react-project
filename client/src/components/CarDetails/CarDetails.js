@@ -3,7 +3,7 @@ import * as carsService from "../../services/carsService";
 import styles from "./CarDetails.module.css";
 import React, { useState, useEffect } from "react";
 
-const CarDetails = ({ match, history }) => {
+const CarDetails = ({ match, history, isAuthenticated }) => {
   const [uid, setUid] = React.useState(null);
 
   useEffect(() => {
@@ -11,10 +11,11 @@ const CarDetails = ({ match, history }) => {
       if (user) {
         const { uid } = user;
         setUid(uid);
+      } else {
+        history.push(`/login`);
       }
     });
   }, []);
-  // console.log(uid);
 
   let [car, setCar] = useState({});
 
@@ -23,36 +24,36 @@ const CarDetails = ({ match, history }) => {
   }, [match]);
 
   const fuelOptions = [
-    { label: "Petrol", value: "petrol" },
-    { label: "Gasoline", value: "gasoline" },
-    { label: "Hybrid", value: "hybrid" },
-    { label: "Diesel", value: "diesel" },
+    { label: "Petrol", value: "Petrol" },
+    { label: "Gasoline", value: "Gasoline" },
+    { label: "Hybrid", value: "Hybrid" },
+    { label: "Diesel", value: "Diesel" },
   ];
 
   const colorOptions = [
-    { label: "Black", value: "black" },
-    { label: "Nardo Grey", value: "nardo grey" },
-    { label: "Nogaro Blue", value: "nogaro blue" },
-    { label: "Yellow", value: "yellow" },
+    { label: "Black", value: "Black" },
+    { label: "Nardo Grey", value: "Nardo Grey" },
+    { label: "Nogaro Blue", value: "Nogaro Blue" },
+    { label: "Yellow", value: "Yellow" },
   ];
 
   const rimsOptions = [
-    { label: "18 Inch Rims", value: "18 inch rims" },
-    { label: "19 Inch Rims", value: "19 inch rims" },
-    { label: "20 Inch Rims", value: "20 inch rims" },
-    { label: "21 Inch Rims", value: "21 inch rims" },
+    { label: "18 Inch Rims", value: "18 Inch Rims" },
+    { label: "19 Inch Rims", value: "19 Inch Rims" },
+    { label: "20 Inch Rims", value: "20 Inch Rims" },
+    { label: "21 Inch Rims", value: "21 Inch Rims" },
   ];
 
   const driveOptions = [
-    { label: "All Wheel Drive", value: "all wheel drive" },
-    { label: "Rear Wheel Drive", value: "rear wheel drive" },
-    { label: "Front Wheel Drive", value: "front wheel drive" },
+    { label: "All Wheel Drive", value: "All Wheel Drive" },
+    { label: "Rear Wheel Drive", value: "Rear Wheel Drive" },
+    { label: "Front Wheel Drive", value: "Front Wheel Drive" },
   ];
 
   const seatsOptions = [
-    { label: "Leather Interior", value: "leather interior" },
-    { label: "Alcantara Interior", value: "alcantara interior" },
-    { label: "Suede Interior", value: "suede interior" },
+    { label: "Leather Interior", value: "Leather Interior" },
+    { label: "Alcantara Interior", value: "Alcantara Interior" },
+    { label: "Suede Interior", value: "Suede Interior" },
   ];
 
   const onOrderSubmitHandler = (e) => {
@@ -87,7 +88,7 @@ const CarDetails = ({ match, history }) => {
     <div className={styles.car_detail}>
       <div className={styles.car_request}>
         <form onSubmit={onOrderSubmitHandler} className={styles.equipment_form}>
-          <p>{uid}</p>
+          <p className={styles.p_id}>{uid}</p>
           <div className={styles.car_details}>
             <article className={styles.details_article}>
               <img className={styles.car_img} src={car.imageUrl} alt="" />

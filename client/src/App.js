@@ -6,8 +6,10 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
 import Catalog from "./components/Catalog/Catalog";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import CarDetails from "./components/CarDetails/CarDetails";
 import Profile from "./components/Profile/Profile";
 import { useEffect, useState } from "react";
@@ -31,14 +33,14 @@ function App() {
     firebase.auth().onAuthStateChanged(setUser);
   }, []);
 
-  const [cars, setCars] = useState([]);
+  // const [cars, setCars] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/cars")
-      .then((res) => res.json())
-      .then((res) => setCars(res))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/cars")
+  //     .then((res) => res.json())
+  //     .then((res) => setCars(res))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   // console.log(cars);
 
@@ -51,9 +53,10 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/catalog" component={Catalog} />
-          <Route path="/cars/details/:id" component={CarDetails} />
-          <Route path="/cars/edit/:id" component={EditDetails} />
+          <Route path="/cars/details/:id" exact component={CarDetails} />
+          <Route path="/cars/details/:id/edit" component={EditDetails} />
           <Route path="/profile/:id" component={Profile} />
+          <Route path="/about" component={About} />
           <Route
             path="/logout"
             render={() => {

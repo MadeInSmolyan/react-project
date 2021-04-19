@@ -11,6 +11,8 @@ const EditDetails = ({ match, history }) => {
       if (user) {
         const { uid } = user;
         setUid(uid);
+      } else {
+        history.push(`/login`);
       }
     });
   }, []);
@@ -21,61 +23,59 @@ const EditDetails = ({ match, history }) => {
     carsService.getOne(match.params.id).then((res) => setCar(res));
   }, [match]);
 
-  console.log(car.textarea);
+  console.log(match);
 
   const fuelOptions = [
-    { label: "Petrol", value: "petrol" },
-    { label: "Gasoline", value: "gasoline" },
-    { label: "Hybrid", value: "hybrid" },
-    { label: "Diesel", value: "diesel" },
+    { label: "Petrol", value: "Petrol" },
+    { label: "Gasoline", value: "Gasoline" },
+    { label: "Hybrid", value: "Hybrid" },
+    { label: "Diesel", value: "Diesel" },
   ];
 
   const colorOptions = [
-    { label: "Black", value: "black" },
-    { label: "Nardo Grey", value: "nardo grey" },
-    { label: "Nogaro Blue", value: "nogaro blue" },
-    { label: "Yellow", value: "yellow" },
+    { label: "Black", value: "Black" },
+    { label: "Nardo Grey", value: "Nardo Grey" },
+    { label: "Nogaro Blue", value: "Nogaro Blue" },
+    { label: "Yellow", value: "Yellow" },
   ];
 
   const rimsOptions = [
-    { label: "18 Inch Rims", value: "18 inch rims" },
-    { label: "19 Inch Rims", value: "19 inch rims" },
-    { label: "20 Inch Rims", value: "20 inch rims" },
-    { label: "21 Inch Rims", value: "21 inch rims" },
+    { label: "18 Inch Rims", value: "18 Inch Rims" },
+    { label: "19 Inch Rims", value: "19 Inch Rims" },
+    { label: "20 Inch Rims", value: "20 Inch Rims" },
+    { label: "21 Inch Rims", value: "21 Inch Rims" },
   ];
 
   const driveOptions = [
-    { label: "All Wheel Drive", value: "all wheel drive" },
-    { label: "Rear Wheel Drive", value: "rear wheel drive" },
-    { label: "Front Wheel Drive", value: "front wheel drive" },
+    { label: "All Wheel Drive", value: "All Wheel Drive" },
+    { label: "Rear Wheel Drive", value: "Rear Wheel Drive" },
+    { label: "Front Wheel Drive", value: "Front Wheel Drive" },
   ];
 
   const seatsOptions = [
-    { label: "Leather Interior", value: "leather interior" },
-    { label: "Alcantara Interior", value: "alcantara interior" },
-    { label: "Suede Interior", value: "suede interior" },
+    { label: "Leather Interior", value: "Leather Interior" },
+    { label: "Alcantara Interior", value: "Alcantara Interior" },
+    { label: "Suede Interior", value: "Suede Interior" },
   ];
 
   const onEditSubmitHandler = (e) => {
     e.preventDefault();
 
-    const { fuel, color, rims, drive, textarea, interior } = e.target;
+    let updatedCar = {
+      ...car,
+      fuel: e.target.fuel.value,
+      color: e.target.color.value,
+      rims: e.target.rims.value,
+      drive: e.target.drive.value,
+      interior: e.target.interior.value,
+      textarea: e.target.textarea.value,
+    };
 
-    console.log(uid);
+    const id = match.params.id;
 
-    carsService
-      .create(
-        fuel.value,
-        color.value,
-        rims.value,
-        drive.value,
-        textarea.value,
-        interior.value,
-        uid
-      )
-      .then(() => {
-        history.push(`/profile/${uid}`);
-      });
+    carsService.update(id, updatedCar).then(() => {
+      history.push(`/profile/${uid}`);
+    });
   };
 
   return (

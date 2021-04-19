@@ -5,105 +5,116 @@
       "make": "Audi",
       "model": "A4 B9",
       "year": "2016 - 2021",
-      "imageUrl": "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/03/f422ab40cae1d6e51a7c62e595704951/03_abt_rs4-r_front.jpg?itok=qwTlL2C2"
+      "imageUrl": "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/03/f422ab40cae1d6e51a7c62e595704951/03_abt_rs4-r_front.jpg?itok=qwTlL2C2",
+      "uid": "asdasd"
     },
     {
       "id": "5bb0888ee1d636867ds9f576",
       "make": "Mercedes",
       "model": "C-class W205",
       "year": "2014 - 2021",
-      "imageUrl": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20200421011813_c-class.jpg&h=795&w=1200&c=1"
+      "imageUrl": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20200421011813_c-class.jpg&h=795&w=1200&c=1",
+      "uid": "asdawassd"
     },
     {
       "id": "5bb0888ee1d636565dw9f123",
       "make": "Porshe",
       "model": "911 Carrera",
       "year": "2018 - 2019",
-      "imageUrl": "https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InBpZTB2dGpubDN3ZTItRFVCSVpaTEUiLCJ3IjpbeyJmbiI6IjVqZXVpN3FmemllNjEtRFVCSVpaTEUiLCJzIjo1MCwicCI6ImNlbnRlcixjZW50ZXIiLCJhIjo4MH1dfQ.x8QYqDdPDIz-HygrmgqpwKm8qXrlEdYSJ2_gOp3S3b0/image;p=main;q=70;s=828x620"
+      "imageUrl": "https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InBpZTB2dGpubDN3ZTItRFVCSVpaTEUiLCJ3IjpbeyJmbiI6IjVqZXVpN3FmemllNjEtRFVCSVpaTEUiLCJzIjo1MCwicCI6ImNlbnRlcixjZW50ZXIiLCJhIjo4MH1dfQ.x8QYqDdPDIz-HygrmgqpwKm8qXrlEdYSJ2_gOp3S3b0/image;p=main;q=70;s=828x620",
+      "uid": "asdaasdsd"
     },
     {
       "id": "5bb0888ee1d636897dd9f168",
       "make": "Maserati",
       "model": "Quattroporte GranSport",
       "year": "2020 - 2021",
-      "imageUrl": "https://images.hgmsites.net/hug/maserati-quattroporte_100556184_h.jpg"
+      "imageUrl": "https://images.hgmsites.net/hug/maserati-quattroporte_100556184_h.jpg",
+      "uid": "asdasaaaad"
     },
     {
       "id": "5bb0888ee1d634567df9f697",
       "make": "BMW",
       "model": "3-series G20",
       "year": "2018 - 2021",
-      "imageUrl": "https://car-images.bauersecure.com/pagefiles/84515/045-3-series.jpg"
+      "imageUrl": "https://car-images.bauersecure.com/pagefiles/84515/045-3-series.jpg",
+      "uid": "assssdasd"
     },
     {
       "id": "5bb0888ee1d634547dg9f597",
       "make": "VW",
       "model": "Scirocco",
       "year": "2015 - 2018",
-      "imageUrl": "https://carsales.pxcrush.net/carsales//car/dealer/6o2hixchq4t54vrm16znsyz3a.jpg?pxc_method=gravityfill&pxc_bgtype=self&pxc_size=720,480"
+      "imageUrl": "https://carsales.pxcrush.net/carsales//car/dealer/6o2hixchq4t54vrm16znsyz3a.jpg?pxc_method=gravityfill&pxc_bgtype=self&pxc_size=720,480",
+      "uid": "adddsdasd"
     },
     {
       "id": "5bb0888ee1d634384dh9f651",
       "make": "SEAT",
       "model": "Cupra Leon",
       "year": "2020 - 2021",
-      "imageUrl": "https://car-images.bauersecure.com/pagefiles/75454/seat_leon_cuprar_10.jpg"
+      "imageUrl": "https://car-images.bauersecure.com/pagefiles/75454/seat_leon_cuprar_10.jpg",
+      "uid": "asdwwwasd"
     },
     {
       "id": "5bb0888ee1d634526dj9f643",
       "make": "Skoda",
       "model": "Octavia Mk4 VRS",
       "year": "2020 - 2021",
-      "imageUrl": "https://car-images.bauersecure.com/pagefiles/92838/skoda_octavia_vrs_iv_60.jpg"
-    },
-    {
       "imageUrl": "https://car-images.bauersecure.com/pagefiles/92838/skoda_octavia_vrs_iv_60.jpg",
-      "make": "Skoda",
-      "model": "Octavia Mk4 VRS",
-      "fuel": "petrol",
-      "color": "nardo grey",
-      "rims": "19 inch rims",
-      "drive": "all wheel drive",
-      "textarea": "I have none!",
-      "interior": "alcantara interior",
-      "uid": "hCxkWkRI2yTkbLWkupzxLTqUQe03",
-      "id": "BNmUy1F"
-    },
-    {
-      "imageUrl": "https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InBpZTB2dGpubDN3ZTItRFVCSVpaTEUiLCJ3IjpbeyJmbiI6IjVqZXVpN3FmemllNjEtRFVCSVpaTEUiLCJzIjo1MCwicCI6ImNlbnRlcixjZW50ZXIiLCJhIjo4MH1dfQ.x8QYqDdPDIz-HygrmgqpwKm8qXrlEdYSJ2_gOp3S3b0/image;p=main;q=70;s=828x620",
-      "make": "Porshe",
-      "model": "911 Carrera",
-      "fuel": "petrol",
-      "color": "black",
-      "rims": "18 inch rims",
-      "drive": "all wheel drive",
-      "textarea": "damn",
-      "interior": "leather interior",
-      "uid": "hCxkWkRI2yTkbLWkupzxLTqUQe03",
-      "id": "FkQHI0J"
+      "uid": "asdaeqrsd"
     },
     {
       "imageUrl": "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/03/f422ab40cae1d6e51a7c62e595704951/03_abt_rs4-r_front.jpg?itok=qwTlL2C2",
       "make": "Audi",
       "model": "A4 B9",
-      "fuel": "petrol",
-      "color": "nogaro blue",
-      "rims": "20 inch rims",
-      "drive": "all wheel drive",
-      "textarea": "favourite!",
-      "interior": "alcantara interior",
-      "uid": "hCxkWkRI2yTkbLWkupzxLTqUQe03",
-      "id": "cXAlWjs"
+      "fuel": "Petrol",
+      "color": "Black",
+      "rims": "18 Inch Rims",
+      "drive": "All Wheel Drive",
+      "textarea": "asdasdasd",
+      "interior": "Leather Interior",
+      "uid": "5R5MzIwsHfVAZRNc53dBlYAA2Tq2",
+      "id": "XBNcCZ0"
     },
     {
-      "imageUrl": "gasoline",
-      "make": "nogaro blue",
-      "model": "21 inch rims",
-      "fuel": "all wheel drive",
-      "color": "favourite!",
-      "rims": "alcantara interior",
-      "drive": "hCxkWkRI2yTkbLWkupzxLTqUQe03",
-      "id": "USIZWa7"
+      "imageUrl": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20200421011813_c-class.jpg&h=795&w=1200&c=1",
+      "make": "Mercedes",
+      "model": "C-class W205",
+      "fuel": "Petrol",
+      "color": "Black",
+      "rims": "18 Inch Rims",
+      "drive": "All Wheel Drive",
+      "textarea": "asfasfddfa",
+      "interior": "Leather Interior",
+      "uid": "UXvhhjBNxrM257cFlNm6x6XTlpr1",
+      "id": "nCQuY05"
+    },
+    {
+      "imageUrl": "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/03/f422ab40cae1d6e51a7c62e595704951/03_abt_rs4-r_front.jpg?itok=qwTlL2C2",
+      "make": "Audi",
+      "model": "A4 B9",
+      "fuel": "Petrol",
+      "color": "Black",
+      "rims": "21 Inch Rims",
+      "drive": "All Wheel Drive",
+      "textarea": "asdasdasdasdfasdfsafsafa",
+      "interior": "Leather Interior",
+      "uid": "UXvhhjBNxrM257cFlNm6x6XTlpr1",
+      "id": "bWrOGrp"
+    },
+    {
+      "imageUrl": "https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InBpZTB2dGpubDN3ZTItRFVCSVpaTEUiLCJ3IjpbeyJmbiI6IjVqZXVpN3FmemllNjEtRFVCSVpaTEUiLCJzIjo1MCwicCI6ImNlbnRlcixjZW50ZXIiLCJhIjo4MH1dfQ.x8QYqDdPDIz-HygrmgqpwKm8qXrlEdYSJ2_gOp3S3b0/image;p=main;q=70;s=828x620",
+      "make": "Porshe",
+      "model": "911 Carrera",
+      "fuel": "Petrol",
+      "color": "Black",
+      "rims": "18 Inch Rims",
+      "drive": "All Wheel Drive",
+      "textarea": "asdsafasdsadsafasdasdasd",
+      "interior": "Alcantara Interior",
+      "uid": "hCxkWkRI2yTkbLWkupzxLTqUQe03",
+      "id": "2ZOGkfE"
     }
   ]
 }

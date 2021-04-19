@@ -4,7 +4,7 @@ import firebase from "../../utils/firebase";
 import EachProfileCard from "./EachProfileCard/EachProfileCard";
 // import EachCard from "./EachCard/EachCard";
 
-const Profile = () => {
+const Profile = ({ history }) => {
   const [uid, setUid] = React.useState(null);
 
   useEffect(() => {
@@ -23,6 +23,8 @@ const Profile = () => {
       if (user) {
         const { email } = user;
         setEmail(email);
+      } else {
+        history.push(`/login`);
       }
     });
   }, [email]);
@@ -49,6 +51,11 @@ const Profile = () => {
       <p id={styles.user_listings_title}>Your Orders:</p>
 
       <div className={styles.home_page}>
+        {cars.length == 0 ? (
+          <p className={styles.no_cars}>No cars in databse</p>
+        ) : (
+          <p></p>
+        )}
         {cars.map((x) => (
           <EachProfileCard
             key={x.id}

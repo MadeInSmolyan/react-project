@@ -45,9 +45,7 @@ header p {
   margin-top: 15px;
   font-weight: bold;
   font-size: medium;
-  margin-left: 970px;
-
-
+  margin-left: 910px;
 }
 
 .home_header {
@@ -69,7 +67,6 @@ header p {
 }
 
 .nav_buttons {
-  width: 200px;
+  width: 270px;
   margin-left: auto;
 }
-
