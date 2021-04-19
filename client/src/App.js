@@ -11,6 +11,7 @@ import Home from "./components/Home/Home";
 import CarDetails from "./components/CarDetails/CarDetails";
 import Profile from "./components/Profile/Profile";
 import { useEffect, useState } from "react";
+import EditDetails from "./components/editDetails/editDetails";
 
 function App() {
   // const [uid, setUid] = React.useState(null);
@@ -51,6 +52,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/catalog" component={Catalog} />
           <Route path="/cars/details/:id" component={CarDetails} />
+          <Route path="/cars/edit/:id" component={EditDetails} />
           <Route path="/profile/:id" component={Profile} />
           <Route
             path="/logout"

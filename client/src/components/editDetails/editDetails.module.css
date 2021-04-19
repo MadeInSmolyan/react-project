@@ -1,0 +1,137 @@
+.car_detail {
+  /* border: 2px solid black; */
+  /* border-radius: 30px; */
+  margin-top: 3em;
+  width: 40em;
+  height: 36em;
+  display: flex;
+  margin-bottom: 10em;
+}
+
+input[type="checkbox"] {
+  color: #fff;
+  font-weight: bold;
+}
+
+.car_img {
+  width: 36em;
+  height: 28em;
+  /* border-radius: 30px 30px 30px; */
+  border-radius: 20px 20px 20px 20px;
+}
+
+.checkbox span,
+label {
+  color: #f1e4d3;
+}
+
+.equipment_form h1 {
+  color: #f1e4d3;
+  margin-top: 1px;
+}
+
+.textarea {
+  display: block;
+  float: inherit;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  resize: both;
+  min-height: 90px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
+label {
+  margin: 20px;
+  position: relative;
+  left: 10px;
+}
+
+select {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.details_article {
+  /* border-radius: 20px; */
+  width: 36em;
+  height: 32em;
+  margin: 1em;
+  background-color: #494747;
+  padding: 1em;
+}
+
+.details_article h3,
+.details_article p,
+.details_article span {
+  color: #f1e4d3;
+}
+
+.car_request {
+  word-wrap: break-word;
+  padding-left: 3em;
+  max-width: 40em;
+}
+
+.car_details {
+  width: 700px;
+}
+
+form p {
+  display: none;
+}
+
+.order_form {
+  /* float: right; */
+  width: 700px;
+  margin-top: 50px;
+}
+
+.equipment_form {
+  margin-top: 30px;
+  margin-left: 370px;
+  height: 650px;
+  width: 700px;
+  min-width: 700px;
+  border: 2px solid black;
+  border-radius: 30px;
+  display: flex;
+}
+.equipment_form h2 {
+  color: #f1e4d3;
+}
+
+.checkbox {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
+.order_btn {
+  background-color: #656665;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 7px 70px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.order_btn:hover {
+  background-color: grey;
+  color: black;
+}
