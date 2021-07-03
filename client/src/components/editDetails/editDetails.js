@@ -2,6 +2,7 @@ import styles from "./editDetails.module.css";
 import * as carsService from "../../services/carsService";
 import React, { useState, useEffect } from "react";
 import firebase from "../../utils/firebase";
+import InputError from "../Shared/InputError";
 
 const EditDetails = ({ match, history }) => {
   const [uid, setUid] = React.useState(null);
@@ -57,6 +58,17 @@ const EditDetails = ({ match, history }) => {
     { label: "Alcantara Interior", value: "Alcantara Interior" },
     { label: "Suede Interior", value: "Suede Interior" },
   ];
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onDescriptionChange = (e) => {
+    // console.log(e.target.value);
+    if (e.target.value.length < 10) {
+      setErrorMessage("Description under 10 symbols!");
+    } else {
+      setErrorMessage("");
+    }
+  };
 
   const onEditSubmitHandler = (e) => {
     e.preventDefault();
@@ -158,12 +170,13 @@ const EditDetails = ({ match, history }) => {
             cols="60"
             rows="4"
             defaultValue={car.textarea}
+            onBlur={onDescriptionChange}
           ></textarea>
           {/* <p><span className={styles.textarea} role="textbox"></span></p> */}
           <input
             className={styles.order_btn}
             type="submit"
-            value="Finish Order"
+            value="Edit Order"
           />
         </div>
       </form>

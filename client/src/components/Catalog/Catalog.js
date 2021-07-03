@@ -44,7 +44,7 @@ const Catalog = ({ match, isAuthenticated}) => {
           />
         ))}
       </div>
-      <div className={styles.home_page}>
+      <div className={styles.home_page} id={styles.home_page1}>
         {secondCars.map((x) => (
           <EachCard
             key={x.id}

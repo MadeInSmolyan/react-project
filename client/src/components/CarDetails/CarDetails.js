@@ -2,8 +2,9 @@ import firebase from "../../utils/firebase";
 import * as carsService from "../../services/carsService";
 import styles from "./CarDetails.module.css";
 import React, { useState, useEffect } from "react";
+import InputError from "../Shared/InputError";
 
-const CarDetails = ({ match, history, isAuthenticated }) => {
+const CarDetails = ({ match, history }) => {
   const [uid, setUid] = React.useState(null);
 
   useEffect(() => {
@@ -17,11 +18,22 @@ const CarDetails = ({ match, history, isAuthenticated }) => {
     });
   }, []);
 
-  let [car, setCar] = useState({});
+  const [car, setCar] = useState({});
 
   useEffect(() => {
     carsService.getOne(match.params.id).then((res) => setCar(res));
   }, [match]);
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onDescriptionChange = (e) => {
+    // console.log(e.target.value);
+    if (e.target.value.length < 10) {
+      setErrorMessage("Description under 10 symbols!");
+    } else {
+      setErrorMessage("");
+    }
+  };
 
   const fuelOptions = [
     { label: "Petrol", value: "Petrol" },
@@ -164,7 +176,9 @@ const CarDetails = ({ match, history, isAuthenticated }) => {
               name="textarea"
               cols="60"
               rows="4"
+              onBlur={onDescriptionChange}
             ></textarea>
+            <InputError>{errorMessage}</InputError>
             {/* <p><span className={styles.textarea} role="textbox"></span></p> */}
             <input
               className={styles.order_btn}

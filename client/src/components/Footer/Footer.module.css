@@ -1,9 +1,10 @@
 footer {
   background-color: #f1e4d3 !important;
   color: black !important;
+  margin-top: 70px;
 }
 
-footer p{
+footer p {
   color: black;
   text-align: center;
 }
